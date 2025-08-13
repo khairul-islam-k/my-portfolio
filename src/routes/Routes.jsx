@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home/Home";
 import Skills from "../pages/skills/Skills";
 import Projects from "../pages/projects/Projects";
+import ProjectDetails from "../pages/shared/ProjectDetails";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
         {
           path: "projects",
           Component: Projects
+        },
+        {
+          path:"project/:id",
+          Component:ProjectDetails
         }
     ]
   },

@@ -12,6 +12,8 @@ import './styles.css';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import ProjectsSection from "../projectsSection/ProjectsSection";
+import Contact from "./Contact";
 
 const Home = () => {
     const frontend = [
@@ -77,65 +79,6 @@ const Home = () => {
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg"
         }
     ];
-
-
-    const projects = [
-  {
-    "projectName": "Matrimony Platform",
-    "projectImage": "https://example.com/images/matrimony.png",
-    "mainTechnologyStack": ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-    "briefDescription": "A modern matrimonial platform allowing users to create profiles, search for potential partners, and filter matches based on preferences.",
-    "liveProjectLink": "https://matrimony-platfrom.netlify.app",
-    "githubRepositoryLink": "https://github.com/khairul-islam-k/matrimony-12",
-    "challengesFaced": [
-      "Implementing complex search and filter algorithms.",
-      "Ensuring secure handling of sensitive personal data.",
-      "Managing large datasets efficiently."
-    ],
-    "potentialImprovements": [
-      "Integrate real-time chat and video calling.",
-      "Add AI-based match suggestions.",
-      "Improve mobile responsiveness."
-    ]
-  },
-  {
-    "projectName": "Service Review App",
-    "projectImage": "https://example.com/images/service-review.png",
-    "mainTechnologyStack": ["React", "DaisyUI", "Node.js", "Express", "MongoDB"],
-    "briefDescription": "A platform where users can review services, rate them, and browse feedback to make informed choices.",
-    "liveProjectLink": "https://service-crostata-1154b7.netlify.app/",
-    "githubRepositoryLink": "https://github.com/khairul-islam-k/service-review-11",
-    "challengesFaced": [
-      "Handling authentication and authorization for user reviews.",
-      "Preventing spam and duplicate reviews.",
-      "Maintaining a responsive and clean UI."
-    ],
-    "potentialImprovements": [
-      "Add AI-powered review summarization.",
-      "Implement service provider dashboards.",
-      "Introduce location-based search."
-    ]
-  },
-  {
-    "projectName": "Plant Care Guide",
-    "projectImage": "https://example.com/images/plant-care.png",
-    "mainTechnologyStack": ["React", "Tailwind CSS", "Firebase", "REST API"],
-    "briefDescription": "An app providing detailed care instructions for various plants, including watering schedules and sunlight needs.",
-    "liveProjectLink": "https://singular-hummingbird-385520.netlify.app/",
-    "githubRepositoryLink": "https://github.com/khairul-islam-k/plant-care-10",
-    "challengesFaced": [
-      "Designing an intuitive interface for plant data.",
-      "Integrating APIs for plant image recognition.",
-      "Handling offline data storage."
-    ],
-    "potentialImprovements": [
-      "Add plant disease detection using AI.",
-      "Include a community forum for plant lovers.",
-      "Enable push notifications for care reminders."
-    ]
-  }
-];
-
 
 
 
@@ -262,7 +205,12 @@ const Home = () => {
 
             {/* projects */}
             <section>
-                projects
+                <ProjectsSection></ProjectsSection>
+            </section>
+
+            {/* contact */}
+            <section>
+                <Contact></Contact>
             </section>
 
 
