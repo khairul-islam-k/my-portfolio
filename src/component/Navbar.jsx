@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import './Navbar.css';
+import logo from "../assets/house.png";
 
 const Navbar = () => {
     const links = <>
@@ -22,7 +23,10 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <div className='flex items-center gap-2'>
+                        <img src={logo} alt="" />
+                        <h3 className='text-2xl font-bold'>kha<span className='text-[#FD6E0A]'>ir</span>ul</h3>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -30,7 +34,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-primary">Resume</a>
+                    <a
+                    href='/resume.pdf'
+                    download='khairul-resume.pdf'
+                    className="btn btn-primary">Resume</a>
                 </div>
             </div>
         </div>

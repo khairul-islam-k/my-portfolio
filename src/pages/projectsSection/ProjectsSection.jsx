@@ -1,7 +1,7 @@
 import React from 'react';
-import matrimony from '../../assets/matrimony.png';
-import service from '../../assets/service-review.png';
-import plantCare from '../../assets/plant-care.png';
+import matrimony from '../../assets/matrimony-2.png';
+import service from '../../assets/service-2.png';
+import plantCare from '../../assets/plant-2.png';
 import { Link } from 'react-router';
 
 

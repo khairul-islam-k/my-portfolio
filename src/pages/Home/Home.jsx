@@ -90,7 +90,9 @@ const Home = () => {
                         <h5 className='text-xl mb-4'>Hi, I am</h5>
                         <h3 className='text-3xl font-bold mb-4'>Md Khairul Islam</h3>
                         <p>I am a web developer.I can make beautiful website</p>
-                        <button className='btn btn-primary mt-4'>Resume</button>
+                        <a 
+                        href="/resume.pdf"
+                        download="khairul-resume.pdf"><button className='btn btn-primary mt-4'>Resume</button></a>
                     </div>
                     <div>
                         <img src={banner} alt="" />
@@ -135,8 +137,8 @@ const Home = () => {
                         >
                             {
                                 frontend.map(data => <SwiperSlide>
-                                    <div className='bg-base-300 p-10 rounded-xl'>
-                                        <img className='w-[150px] h-[150px] mx-auto' src={data.logo} alt="" />
+                                    <div className='bg-base-300 lg:p-10 rounded-xl'>
+                                        <img className='lg:w-[150px] lg:h-[150px] mx-auto' src={data.logo} alt="" />
                                         <h3 className='text-center text-neutral'>{data.name}</h3>
                                     </div>
                                 </SwiperSlide>)
@@ -161,8 +163,8 @@ const Home = () => {
                         >
                             {
                                 backend.map(data => <SwiperSlide>
-                                    <div className='bg-base-300 p-10 rounded-xl'>
-                                        <img className='w-[150px] h-[150px] mx-auto' src={data.logo} alt="" />
+                                    <div className='bg-base-300 lg:p-10 rounded-xl'>
+                                        <img className='lg:w-[150px] lg:h-[150px] mx-auto' src={data.logo} alt="" />
                                         <h3 className='text-center text-neutral'>{data.name}</h3>
                                     </div>
                                 </SwiperSlide>)
@@ -187,8 +189,8 @@ const Home = () => {
                         >
                             {
                                 tools.map(data => <SwiperSlide>
-                                    <div className='bg-base-300 p-10 rounded-xl'>
-                                        <img className='w-[150px] h-[150px] mx-auto' src={data.logo} alt="" />
+                                    <div className='bg-base-300 lg:p-10 rounded-xl'>
+                                        <img className='lg:w-[150px] lg:h-[150px] mx-auto' src={data.logo} alt="" />
                                         <h3 className='text-center text-neutral'>{data.name}</h3>
                                     </div>
                                 </SwiperSlide>)
