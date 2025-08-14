@@ -68,7 +68,7 @@ import { Link } from 'react-router';
 
 const ProjectsSection = () => {
     return (
-        <div className="min-h-screen bg-base-100 py-10 px-4">
+        <div className=" px-4">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-4xl font-bold text-center mb-10">My Projects</h2>
 

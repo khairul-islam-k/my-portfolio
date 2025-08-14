@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import './styles.css';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
@@ -120,10 +119,10 @@ const Home = () => {
 
             </section>
 
-            <section className='p-10 text-neutral bg-gray-200'>
+            <section className='p-10 text-neutral bg-base-300'>
                 <h2 className='text-3xl font-bold text-center mb-10'>What I do</h2>
                 <div className='bg-white py-5 rounded-xl mb-5'>
-                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>FrontEnd skills:</h2>
+                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>FrontEnd:</h2>
                     <div className='text-white w-11/12 mx-auto'>
                         <Swiper
                             slidesPerView={3}
@@ -136,9 +135,9 @@ const Home = () => {
                         >
                             {
                                 frontend.map(data => <SwiperSlide>
-                                    <div>
-                                        <img src={data.logo} alt="" />
-                                        <h3>{data.name}</h3>
+                                    <div className='bg-base-300 p-10 rounded-xl'>
+                                        <img className='w-[150px] h-[150px] mx-auto' src={data.logo} alt="" />
+                                        <h3 className='text-center text-neutral'>{data.name}</h3>
                                     </div>
                                 </SwiperSlide>)
                             }
@@ -149,7 +148,7 @@ const Home = () => {
 
 
                 <div className='bg-white py-5 rounded-xl mb-5'>
-                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>FrontEnd skills:</h2>
+                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>BackEnd:</h2>
                     <div className='text-white w-11/12 mx-auto'>
                         <Swiper
                             slidesPerView={3}
@@ -162,9 +161,9 @@ const Home = () => {
                         >
                             {
                                 backend.map(data => <SwiperSlide>
-                                    <div>
-                                        <img src={data.logo} alt="" />
-                                        <h3>{data.name}</h3>
+                                    <div className='bg-base-300 p-10 rounded-xl'>
+                                        <img className='w-[150px] h-[150px] mx-auto' src={data.logo} alt="" />
+                                        <h3 className='text-center text-neutral'>{data.name}</h3>
                                     </div>
                                 </SwiperSlide>)
                             }
@@ -175,7 +174,7 @@ const Home = () => {
 
 
                 <div className='bg-white py-5 rounded-xl'>
-                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>FrontEnd skills:</h2>
+                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>Tools:</h2>
                     <div className='text-white w-11/12 mx-auto'>
                         <Swiper
                             slidesPerView={3}
@@ -188,9 +187,9 @@ const Home = () => {
                         >
                             {
                                 tools.map(data => <SwiperSlide>
-                                    <div>
-                                        <img className='w-[300px] h-[300px]' src={data.logo} alt="" />
-                                        <h3>{data.name}</h3>
+                                    <div className='bg-base-300 p-10 rounded-xl'>
+                                        <img className='w-[150px] h-[150px] mx-auto' src={data.logo} alt="" />
+                                        <h3 className='text-center text-neutral'>{data.name}</h3>
                                     </div>
                                 </SwiperSlide>)
                             }
@@ -204,12 +203,12 @@ const Home = () => {
             </section>
 
             {/* projects */}
-            <section>
+            <section className='bg-base-300'>
                 <ProjectsSection></ProjectsSection>
             </section>
 
             {/* contact */}
-            <section>
+            <section className='bg-base-300'>
                 <Contact></Contact>
             </section>
 

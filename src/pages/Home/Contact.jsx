@@ -3,7 +3,7 @@ import { Mail, Phone, MessageCircle } from "lucide-react";
 
 const Contact = () => {
     return (
-        <div className="min-h-[50vh] bg-base-100 py-12 px-4">
+        <div className="min-h-[50vh] py-12 px-4">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-4xl font-bold mb-6">Contact Information</h2>
                 <p className="mb-8 text-base-content">

@@ -10,7 +10,7 @@
 
   --color-base-100: white;
   --color-base-200: rgba(255, 248, 243, 1);
-  --color-base-300: oklch(92% 0.04 240);
+  --color-base-300: #EBE8E8;
   --color-base-content: oklch(20% 0.05 240);
   --color-primary: blueviolet;
   --color-primary-content: oklch(98% 0.01 240);

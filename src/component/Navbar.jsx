@@ -9,7 +9,7 @@ const Navbar = () => {
     <li><NavLink to='/projects'>Projects</NavLink></li>
     </>
     return (
-        <div className='px-4 fixed w-full z-10 bg-[#E4FC68]'>
+        <div className='px-4 fixed w-full z-10 bg-[#fff1f1]'>
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
