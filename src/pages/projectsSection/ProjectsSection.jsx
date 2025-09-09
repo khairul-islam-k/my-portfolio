@@ -3,9 +3,11 @@ import matrimony from '../../assets/matrimony-2.png';
 import service from '../../assets/service-2.png';
 import plantCare from '../../assets/plant-2.png';
 import { Link } from 'react-router';
+import { motion } from "motion/react";
+import { Rotate3D } from 'lucide-react';
 
 
- const projects = [
+const projects = [
   {
     "id": 1,
     "projectName": "Matrimony Platform",
@@ -67,44 +69,48 @@ import { Link } from 'react-router';
 
 
 const ProjectsSection = () => {
-    return (
-        <div className=" px-4">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-10">My Projects</h2>
+  return (
+    <div className=" px-4">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-10">My Projects</h2>
 
-                {/* Grid of Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <div
-                            key={index}
-                            className="card bg-base-200 shadow-lg hover:shadow-xl transition duration-300"
-                        >
-                            {/* Image */}
-                            <figure>
-                                <img
-                                    src={project.projectImage}
-                                    alt={project.projectName}
-                                    className="w-full h-48 object-cover"
-                                />
-                            </figure>
+        {/* Grid of Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              style={{
+                border: "3px solid transparent",
+                borderImageSlice: 1,
+              }}
+              key={index}
+              className="card bg-base-200 shadow-lg hover:shadow-xl transition duration-300 border-b-2 border-blue-500"
+            >
+              {/* Image */}
+              <figure>
+                <img
+                  src={project.projectImage}
+                  alt={project.projectName}
+                  className="w-full h-48 object-cover"
+                />
+              </figure>
 
-                            {/* Card Body */}
-                            <div className="card-body">
-                                <h3 className="card-title">{project.projectName}</h3>
-                                <div className="card-actions justify-end">
-                                    <Link to={`/project/${project.id}`}>
-                                    <button className="btn btn-primary">
-                                        View Details
-                                    </button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+              {/* Card Body */}
+              <div className="card-body">
+                <h3 className="card-title">{project.projectName}</h3>
+                <div className="card-actions justify-end">
+                  <Link to={`/project/${project.id}`}>
+                    <button className="btn btn-primary">
+                      View Details
+                    </button>
+                  </Link>
                 </div>
-            </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ProjectsSection;

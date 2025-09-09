@@ -1,18 +1,10 @@
-import banner from "../../assets/rsz_adobe_express_-_file.png";
-
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-
-// import required modules
-import { Pagination } from 'swiper/modules';
+import banner from "../../assets/khairul-200.png";
+import { FaDownload } from "react-icons/fa";
+import { motion } from "motion/react";
 import ProjectsSection from "../projectsSection/ProjectsSection";
 import Contact from "./Contact";
+import AllSkills from '../shared/AllSkills';
 
 const Home = () => {
     const frontend = [
@@ -83,20 +75,34 @@ const Home = () => {
 
     return (
         <div className='pt-18'>
-            <div className='bg-linear-to-t from-[#FFD4D4] to-[#fffafa]'>
+            <div>
 
-                <div className=' w-11/12 mx-auto flex flex-col-reverse lg:flex-row items-center justify-around bg-[url("assets/header_bg.png")] bg-no-repeat bg-bottom-right'>
+                <div className=' w-11/12 mx-auto flex flex-col-reverse lg:flex-row items-center justify-around bg-no-repeat bg-bottom-right'>
                     <div className='pl-2 py-2'>
                         <h5 className='text-xl mb-4'>Hi, I am</h5>
-                        <h3 className='text-3xl font-bold mb-4'>Md Khairul Islam</h3>
+                        <h3 className='text-3xl font-bold mb-4'>Md <motion.span
+                            animate={{ color: ["#A8594A", "#FCFF7D", "#3CFA89", "#FF0085", "#66C0FF", "#FF66DE"] }}
+                            transition={{ duration: 2, repeat: Infinity, repeatType: 'loop' }}
+                        >Khairul</motion.span> Islam</h3>
                         <p>I am a web developer.I can make beautiful website</p>
-                        <a 
-                        href="/resume.pdf"
-                        download="khairul-resume.pdf"><button className='btn btn-primary mt-4'>Resume</button></a>
+                        <a
+                            href="/resume-1.pdf"
+                            download="khairul-resume.pdf"><button className='btn btn-primary mt-4'>Resume <FaDownload /></button></a>
                     </div>
-                    <div>
+                    <motion.div
+                        animate={{
+                            background: [
+                                "linear-gradient(90deg, #ff0080, #7928ca)",
+                                "linear-gradient(90deg, #7928ca, #00ffcc)",
+                                "linear-gradient(90deg, #00ffcc, #ff0080)"
+                            ],
+                        }}
+                        transition={{ duration: 2, repeat: Infinity, repeatType: 'loop' }}
+
+                        className='rounded-xl'
+                    >
                         <img src={banner} alt="" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
@@ -104,113 +110,42 @@ const Home = () => {
             <section className='border-2 w-11/12 mx-auto my-20 p-3 rounded-2xl'>
                 <h3 className='text-3xl font-bold text-center'>About me</h3>
                 <h4 className='text-xl font-bold mb-3 mt-4'>Programming Journey :</h4>
-               <p> I began my programming journey with curiosity and a passion for problem-solving. Starting with basic HTML and CSS, I gradually explored JavaScript, React, Node.js, Express, and MongoDB, building projects that solve real-life problems. Over time, I developed a strong understanding of both frontend and backend development, enabling me to create complete, functional</p>
+                <p> I began my programming journey with curiosity and a passion for problem-solving. Starting with basic HTML and CSS, I gradually explored JavaScript, React, Node.js, Express, and MongoDB, building projects that solve real-life problems. Over time, I developed a strong understanding of both frontend and backend development, enabling me to create complete, functional</p>
 
-               
+
                 <h4 className='text-xl font-bold mb-3 mt-4'>Work I Enjoy :</h4>
-               <p>I love building intuitive, user-friendly web applications that not only look great but also perform seamlessly. Whether it’s designing interactive UIs, optimizing performance, or integrating APIs, I enjoy the entire process of turning an idea into a functional product.</p>
+                <p>I love building intuitive, user-friendly web applications that not only look great but also perform seamlessly. Whether it’s designing interactive UIs, optimizing performance, or integrating APIs, I enjoy the entire process of turning an idea into a functional product.</p>
 
                 <h4 className='text-xl font-bold mb-3 mt-4'>Hobbies & interests :</h4>
-               <p>Outside of coding, I enjoy playing cricket and reading about new tech trends. I also like learning about business and entrepreneurship, as I believe technology and innovation go hand-in-hand.</p>
+                <p>Outside of coding, I enjoy playing cricket and reading about new tech trends. I also like learning about business and entrepreneurship, as I believe technology and innovation go hand-in-hand.</p>
 
                 <h4 className='text-xl font-bold mb-3 mt-4'>Personality :</h4>
-               <p>I’m a curious, detail-oriented, and self-motivated individual who enjoys continuous learning. I’m always eager to take on challenges, improve my skills, and collaborate with others to create meaningful solutions.</p>
+                <p>I’m a curious, detail-oriented, and self-motivated individual who enjoys continuous learning. I’m always eager to take on challenges, improve my skills, and collaborate with others to create meaningful solutions.</p>
 
                 <h4 className='text-xl font-bold mb-3 mt-4'>Mindset :</h4>
-               <p>I believe in writing clean, maintainable code and value teamwork as much as individual growth. My approach to work is proactive and solution-driven, and I always keep user experience at the heart of my development process</p>
+                <p>I believe in writing clean, maintainable code and value teamwork as much as individual growth. My approach to work is proactive and solution-driven, and I always keep user experience at the heart of my development process</p>
 
             </section>
 
-            <section className='p-10 text-neutral bg-base-300'>
+            <section className='p-10 text-neutral'>
                 <h2 className='text-3xl font-bold text-center mb-10'>What I do</h2>
-                <div className='bg-white py-5 rounded-xl mb-5'>
-                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>FrontEnd:</h2>
-                    <div className='text-white w-11/12 mx-auto'>
-                        <Swiper
-                            slidesPerView={3}
-                            spaceBetween={30}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[Pagination]}
-                            className="mySwiper"
-                        >
-                            {
-                                frontend.map(data => <SwiperSlide>
-                                    <div className='bg-base-300 lg:p-10 rounded-xl'>
-                                        <img className='lg:w-[150px] lg:h-[150px] mx-auto' src={data.logo} alt="" />
-                                        <h3 className='text-center text-neutral'>{data.name}</h3>
-                                    </div>
-                                </SwiperSlide>)
-                            }
 
-                        </Swiper>
-                    </div>
-                </div>
-
-
-                <div className='bg-white py-5 rounded-xl mb-5'>
-                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>BackEnd:</h2>
-                    <div className='text-white w-11/12 mx-auto'>
-                        <Swiper
-                            slidesPerView={3}
-                            spaceBetween={30}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[Pagination]}
-                            className="mySwiper"
-                        >
-                            {
-                                backend.map(data => <SwiperSlide>
-                                    <div className='bg-base-300 lg:p-10 rounded-xl'>
-                                        <img className='lg:w-[150px] lg:h-[150px] mx-auto' src={data.logo} alt="" />
-                                        <h3 className='text-center text-neutral'>{data.name}</h3>
-                                    </div>
-                                </SwiperSlide>)
-                            }
-
-                        </Swiper>
-                    </div>
-                </div>
-
-
-                <div className='bg-white py-5 rounded-xl'>
-                    <h2 className='text-2xl font-bold mb-5 lg:ml-10'>Tools:</h2>
-                    <div className='text-white w-11/12 mx-auto'>
-                        <Swiper
-                            slidesPerView={3}
-                            spaceBetween={30}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[Pagination]}
-                            className="mySwiper"
-                        >
-                            {
-                                tools.map(data => <SwiperSlide>
-                                    <div className='bg-base-300 lg:p-10 rounded-xl'>
-                                        <img className='lg:w-[150px] lg:h-[150px] mx-auto' src={data.logo} alt="" />
-                                        <h3 className='text-center text-neutral'>{data.name}</h3>
-                                    </div>
-                                </SwiperSlide>)
-                            }
-
-                        </Swiper>
-                    </div>
-                </div>
-
+                <AllSkills
+                frontend={frontend}
+                backend={backend}
+                tools={tools}
+                ></AllSkills>
 
 
             </section>
 
             {/* projects */}
-            <section className='bg-base-300'>
+            <section>
                 <ProjectsSection></ProjectsSection>
             </section>
 
             {/* contact */}
-            <section className='bg-base-300'>
+            <section>
                 <Contact></Contact>
             </section>
 
