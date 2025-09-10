@@ -2,7 +2,7 @@ import { Baby } from 'lucide-react';
 import React from 'react';
 
 const AllSkills = ({ frontend, backend, tools }) => {
-    console.log(frontend, backend, tools);
+    
     return (
         <div className='max-w-[1200px] mx-auto'>
 

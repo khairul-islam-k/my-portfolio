@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import './Navbar.css';
 import logo from "../assets/house.png";
@@ -10,6 +10,23 @@ const Navbar = () => {
         <li><NavLink to='/skills'>Skills</NavLink></li>
         <li><NavLink to='/projects'>Projects</NavLink></li>
     </>
+
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
+
+    const handleToggle = () => {
+        if (theme === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    }
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme);
+        const localTheme = localStorage.getItem('theme');
+        document.querySelector('html').setAttribute('data-theme', localTheme);
+    },[theme])
+
     return (
         <div className='px-4 fixed w-full z-10 bg-base-100'>
             <div className="navbar">
@@ -37,7 +54,10 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <label className="swap swap-rotate mr-3">
                         {/* this hidden checkbox controls the state */}
-                        <input type="checkbox" className="theme-controller" value="synthwave" />
+                        <input onClick={handleToggle} 
+                        type="checkbox"
+                        defaultChecked={theme === 'light' ? false : true} 
+                        className="theme-controller" value="synthwave" />
 
                         {/* sun icon */}
                         <svg

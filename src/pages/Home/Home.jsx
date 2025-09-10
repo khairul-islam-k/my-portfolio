@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import banner from "../../assets/khairul-200.png";
 import { FaDownload } from "react-icons/fa";
 import { motion } from "motion/react";
@@ -71,8 +71,6 @@ const Home = () => {
         }
     ];
 
-
-
     return (
         <div className='pt-18'>
             <div>
@@ -127,7 +125,7 @@ const Home = () => {
 
             </section>
 
-            <section className='p-10 text-neutral'>
+            <section className='p-10'>
                 <h2 className='text-3xl font-bold text-center mb-10'>What I do</h2>
 
                 <AllSkills
