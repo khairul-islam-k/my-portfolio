@@ -3,27 +3,29 @@ import { Link, useParams } from 'react-router';
 import matrimony from '../../assets/matrimony-2.png';
 import service from '../../assets/service-2.png';
 import plantCare from '../../assets/plant-2.png';
+import tourManage from '../../assets/tour-manage.png';
+import delivery from '../../assets/fast-delivery.png';
 
 const projects = [
   {
-    "id": 1,
-    "projectName": "Matrimony Platform",
-    "projectImage": matrimony,
-    "mainTechnologyStack": ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-    "briefDescription": "A modern matrimonial platform allowing users to create profiles, search for potential partners, and filter matches based on preferences.",
-    "liveProjectLink": "https://matrimony-platfrom.netlify.app",
-    "githubRepositoryLink": "https://github.com/khairul-islam-k/matrimony-12",
-    "challengesFaced": [
-      "Implementing complex search and filter algorithms.",
-      "Ensuring secure handling of sensitive personal data.",
-      "Managing large datasets efficiently."
-    ],
-    "potentialImprovements": [
-      "Integrate real-time chat and video calling.",
-      "Add AI-based match suggestions.",
-      "Improve mobile responsiveness."
-    ]
-  },
+      "id": 1,
+      "projectName": "Matrimony Platform",
+      "projectImage": matrimony,
+      "mainTechnologyStack": ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+      "briefDescription": "A modern matrimonial platform allowing users to create profiles, search for potential partners, and filter matches based on preferences.",
+      "liveProjectLink": "https://matrimony-platfrom.netlify.app",
+      "githubRepositoryLink": "https://github.com/khairul-islam-k/matrimony-12",
+      "challengesFaced": [
+        "Implementing complex search and filter algorithms.",
+        "Ensuring secure handling of sensitive personal data.",
+        "Managing large datasets efficiently."
+      ],
+      "potentialImprovements": [
+        "Send biodata request to admin; admin approves or rejects",
+        "users can view, and filter biodata profiles by age, location, profession, etc",
+        "Payments handled securely through Stripe before unlocking user details"
+      ]
+    },
   {
     "id": 2,
     "projectName": "Service Review App",
@@ -38,13 +40,32 @@ const projects = [
       "Maintaining a responsive and clean UI."
     ],
     "potentialImprovements": [
-      "Add AI-powered review summarization.",
-      "Implement service provider dashboards.",
-      "Introduce location-based search."
+      "Filter and search services based on category, price",
+      "Dashboard shows service tracking and total reviews",
+      "Protected routes ensuring only authenticated users can review"
     ]
   },
   {
     "id": 3,
+    "projectName": "Tour Management System (Team Project)",
+    "projectImage": tourManage,
+    "mainTechnologyStack": ["Next.js", "Tailwind CSS", "NextAuth", "Socket.io", "REST API", "strip"],
+    "briefDescription": "A tour management platform where users can explore destinations, join tour groups, and make bookings.",
+    "liveProjectLink": "https://tour-management-system-team-ultimat-tan.vercel.app",
+    "githubRepositoryLink": "https://github.com/rafiq-567/tour-management-system-team-ultimate-coding",
+    "challengesFaced": [
+      "Authentication was a challenging part for me",
+      "Real-time chat",
+      "Different role base login system"
+    ],
+    "potentialImprovements": [
+      "Users can real-time group chat for communication between travelers",
+      "Users can book destinations and make payments through Stripe",
+      "Manage all users, tours, and bookings from the admin dashboard"
+    ]
+  },
+  {
+    "id": 4,
     "projectName": "Plant Care Guide",
     "projectImage": plantCare,
     "mainTechnologyStack": ["React", "Tailwind CSS", "Firebase", "REST API"],
@@ -61,7 +82,23 @@ const projects = [
       "Include a community forum for plant lovers.",
       "Enable push notifications for care reminders."
     ]
-  }
+  },
+  {
+    "id": 5,
+    "projectName": "Fast Delivery",
+    "projectImage": delivery,
+    "mainTechnologyStack": ["Next.js", "Typescript","Mongoose", "Tailwind CSS", "NextAuth", "REST API"],
+    "briefDescription": "An app providing detailed care instructions for various plants, including watering schedules and sunlight needs.",
+    "liveProjectLink": "https://fast-delivery-ecru.vercel.app",
+    "githubRepositoryLink": "https://github.com/khairul-islam-k/parcel-delivery-app-next",
+    "challengesFaced": [
+      "Now, this App is Developing",
+    ],
+    "potentialImprovements": [
+      "Different authentication",
+      "Many crud operation here",
+    ]
+  },
 ];
 
 const ProjectDetails = () => {
@@ -83,7 +120,7 @@ const ProjectDetails = () => {
         {/* Project Name */}
         <h1 className="text-3xl font-bold mb-4">{project.projectName}</h1>
 
-         {/* Description */}
+        {/* Description */}
         <p className="mb-6">{project.briefDescription}</p>
 
         {/* Tech Stack */}
@@ -104,7 +141,7 @@ const ProjectDetails = () => {
         </ul>
 
         {/* Future Plans */}
-        <h2 className="text-xl font-semibold mb-2">Potential Improvements:</h2>
+        <h2 className="text-xl font-semibold mb-2">Feature Improvements:</h2>
         <ul className="list-disc list-inside mb-6">
           {project.potentialImprovements.map((plan, i) => (
             <li key={i}>{plan}</li>
