@@ -10,24 +10,40 @@ const Home = () => {
     const frontend = [
         {
             "id": 1,
+            "name": "Next.js",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
+        },
+        {
+            "id": 2,
             "name": "React",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
         },
         {
-            "id": 2,
+            "id": 3,
+            "name": "TypeScript",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+        },
+        {
+            "id": 4,
             "name": "JavaScript",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
         },
         {
-            "id": 3,
+            "id": 5,
             "name": "HTML",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
         },
         {
-            "id": 4,
+            "id": 6,
             "name": "CSS",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+        },
+        {
+            "id": 7,
+            "name": "Tailwind CSS",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
         }
+
     ];
 
     const backend = [
@@ -45,7 +61,33 @@ const Home = () => {
             "id": 3,
             "name": "MongoDB",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
+        },
+        {
+            "id": 4,
+            "name": "MySQL",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg"
+        },
+        {
+            "id": 5,
+            "name": "REST APIs",
+            "logo": "https://cdn-icons-png.flaticon.com/512/2165/2165004.png"
+        },
+        {
+            "id": 6,
+            "name": "JWT",
+            "logo": "https://cdn.worldvectorlogo.com/logos/jwt-3.svg"
+        },
+        {
+            "id": 7,
+            "name": "Socket.io",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg"
+        },
+        {
+            "id": 8,
+            "name": "Mongoose",
+            "logo": "https://cdn.worldvectorlogo.com/logos/mongoose-1.svg"
         }
+
     ];
 
     const tools = [
@@ -129,9 +171,9 @@ const Home = () => {
                 <h2 className='text-3xl font-bold text-center mb-10'>What I do</h2>
 
                 <AllSkills
-                frontend={frontend}
-                backend={backend}
-                tools={tools}
+                    frontend={frontend}
+                    backend={backend}
+                    tools={tools}
                 ></AllSkills>
 
 
